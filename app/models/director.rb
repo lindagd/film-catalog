@@ -1,4 +1,4 @@
 class Director < ApplicationRecord
-  belongs_to :favorite_genre, class_name: 'genre'
+  belongs_to :favorite_genre, class_name: 'Genre'
   has_many :films
 end
