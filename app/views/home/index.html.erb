@@ -1,1 +1,7 @@
 <h1>Film Catalog</h1>
+
+<% @films.each do |film| %>
+  <%= link_to film.title, film %>
+  <%= film.release_year %>
+    <br/>
+<% end %>

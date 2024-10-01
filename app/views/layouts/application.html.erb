@@ -18,6 +18,14 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Cadastrar filme', new_film_path %></li>
+        <li><%= link_to 'Cadastrar gênero', new_genre_path %></li>
+        <li><%= link_to 'Cadastrar diretor', new_director_path %></li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

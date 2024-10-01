@@ -1,0 +1,11 @@
+<h1><%= @film.title %></h1>
+<%= link_to 'Editar', edit_film_path %>
+
+<dl>
+  <dd><strong>Diretor: </strong><%= @film.director.name %></dd>
+  <dd><strong>Ano de lançamento: </strong><%= @film.release_year %></dd>
+  <dd><strong>Duração (min): </strong><%= @film.running_time %></dd>
+  <dd><strong>Gênero: </strong><%= @film.genre.name %></dd>
+  <dd><strong>País de origem: </strong><%= @film.country_of_origin %></dd>
+  <dd><strong>Sinopse: </strong><%= @film.synopsis%></dd>
+</dl>
