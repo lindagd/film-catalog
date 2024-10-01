@@ -14,14 +14,14 @@ class GenresController < ApplicationController
     return redirect_to genre_path(@genre[:id]) if @genre.save
 
     flash.alert = 'Campos preenchidos incorretamente!'
-    render:new
+    render :new
   end
 
   def edit
     @genre = Genre.find params[:id]
   end
 
-  def update 
+  def update
     genre = Genre.find params[:id]
 
     if genre.update(name: params[:genre][:name])

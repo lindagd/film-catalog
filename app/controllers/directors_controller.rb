@@ -14,14 +14,14 @@ class DirectorsController < ApplicationController
     return redirect_to director_path(@director[:id]) if @director.save
 
     flash.alert = 'Campos preenchidos incorretamente!'
-    render:new
+    render :new
   end
 
   def edit
     @director = Director.find params[:id]
   end
 
-  def update 
+  def update
     director = Director.find params[:id]
 
     if director.update(director_params)
