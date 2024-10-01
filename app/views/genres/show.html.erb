@@ -1,0 +1,11 @@
+<h1>Filmes de <%= @genre.name %></h1>
+<%= link_to 'Editar', edit_genre_path %>
+
+<ul>
+  <% @films.each do |film| %>
+    <li>
+    <%= link_to film.title, film %>
+    <%= film.release_year %>
+    </li>
+  <% end %>
+</ul>
