@@ -1,0 +1,16 @@
+<%= form_with model: @director do | f | %>
+  <%= f.label 'Nome' %>
+  <%= f.text_field :name %><br/>
+  
+  <%= f.label 'Nacionalidade' %>
+  <%= f.text_field :nationality %><br/>
+  
+  <%= f.label 'Nascimento' %>
+  <%= f.date_select :birth_date, start_year: Time.now.year, end_year: 1800, :include_blank => true %>
+  <br/>
+
+  <%= f.label 'Gênero favorito' %>
+  <%= f.collection_select :favorite_genre_id, Genre.all, :id, :name, :include_blank => true %>
+  <br/>
+  <%= f.submit 'Salvar' %>
+<% end %>

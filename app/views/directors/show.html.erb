@@ -1,0 +1,23 @@
+
+<main style="display: flex; gap: 10px">
+  <div>
+    <h1><%= @director.name %></h1>
+    <ul>
+      <li><strong>Nacionalidade: </strong><%= @director.nationality %></li>
+      <li><strong>Nascimento: </strong><%= @director.birth_date %></li>
+      <li><strong>Gênero favorito: </strong><%= @director.favorite_genre.name %></li>
+    </ul>
+    <%= link_to 'Editar', edit_director_path %>
+  </div>
+  <div>
+    <h2>Dirigiu:</h2>
+    <ul>
+      <% @films.each do |film| %>
+        <li>
+        <%= link_to film.title, film %>
+        <%= film.release_year %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</main>
